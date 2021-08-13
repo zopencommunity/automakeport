@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#
+# ignore automake core code
+#
+automake-*
+tests/basic/autom4te.cache
+tests/basic/configure
