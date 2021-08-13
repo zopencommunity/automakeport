@@ -6,6 +6,7 @@
 #  - ensure you have GNU make installed (4.1 or later)
 #  - ensure you have Perl installed (Perl 5.006 or later)
 #  - ensure you have access to c99
+#  - ensure you have built and installed autoconf and m4 already
 #  - either pre-install the AUTOMAKE tar ball into AUTOMAKE_ROOT or have curl/gunzip installed for auto-download
 #
 if [ "${AUTOMAKE_ROOT}" = '' ]; then
@@ -26,6 +27,18 @@ fi
 perl --version >/dev/null 2>&1 
 if [ $? -gt 0 ]; then
 	echo "You need perl on your PATH in order to build AUTOMAKE" >&2
+	exit 16
+fi
+
+m4 --version >/dev/null 2>&1 
+if [ $? -gt 0 ]; then
+	echo "You need m4 on your PATH in order to build AUTOMAKE" >&2
+	exit 16
+fi
+
+autoconf --version >/dev/null 2>&1 
+if [ $? -gt 0 ]; then
+	echo "You need autoconf on your PATH in order to build AUTOMAKE" >&2
 	exit 16
 fi
 
