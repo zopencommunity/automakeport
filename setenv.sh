@@ -13,14 +13,18 @@ else
 	export AUTOMAKE_VRM="automake-1.16"
 	export AUTOMAKE_ROOT="${PWD}"
 
-	# 
-	# Add 'm4' to PATH
-	#
-	export PATH=/usr/local/bin:$PATH 
+	export AUTOTOOLS_MIRROR="https://github.com/autotools-mirror"
+	export AUTOCONF_URL="http://ftp.gnu.org/gnu/automake/"
 
 	#
-	# Add 'Perl' to PATH, LIBPATH, PERL5LIB
+        # Add 'Perl' and 'M4' to PATH, LIBPATH, PERL5LIB
 	#
- 	export PERL5LIB=$PERL5LIB:/usr/local/lib/perl5
- 	export LIBPATH=$LIBPATH:/usr/local/lib/perl5/5.24.0/os390/CORE
+        fsroot=$( basename $HOME )
+	export PERL_ROOT="/${fsroot}/perlprod"
+	export M4_ROOT="/${fsroot}/m4prod"
+	export AUTOCONF_ROOT="/${fsroot}/autoconfprod"
+	export LIBPATH="${PERL_ROOT}/lib/perl5/*/os390/CORE:$LIBPATH"
+	export PATH="${M4_ROOT}/bin:${PERL_ROOT}/bin:${AUTOCONF_ROOT}/bin:$PATH"
+
+	export AUTOMAKE_PROD="/${fsroot}/automakeprod"
 fi
