@@ -132,8 +132,10 @@ if ! ./runexamples.sh ; then
 	echo "Example tests of AUTOMAKE failed." >&2
 	exit 16
 fi
+
 cd "${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}" || exit 99
-if ! make check ; then
+# make check has to be run in 'sh' and not bash
+if ! sh make check ; then
 	echo "MAKE check of AUTOMAKE tree failed." >&2
 	exit 16
 fi
