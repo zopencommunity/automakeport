@@ -119,10 +119,6 @@ if ! make ; then
 	echo "MAKE of AUTOMAKE tree failed." >&2
 	exit 16
 fi
-if ! make install ; then
-	echo "MAKE install of AUTOMAKE tree failed." >&2
-	exit 16
-fi
 
 cd "${DELTA_ROOT}/tests"
 export PATH="${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}/src:${PATH}"
@@ -134,6 +130,15 @@ fi
 
 if ! ./runexamples.sh ; then
 	echo "Example tests of AUTOMAKE failed." >&2
+	exit 16
+fi
+cd "${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}" || exit 99
+if ! make check ; then
+	echo "MAKE check of AUTOMAKE tree failed." >&2
+	exit 16
+fi
+if ! make install ; then
+	echo "MAKE install of AUTOMAKE tree failed." >&2
 	exit 16
 fi
 exit 0
