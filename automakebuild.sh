@@ -9,6 +9,7 @@
 #  - ensure you have built and installed autoconf and m4 already
 #  - either pre-install the AUTOMAKE tar ball into AUTOMAKE_ROOT or have curl/gunzip installed for auto-download
 #
+#set -x
 if [ "${AUTOMAKE_ROOT}" = '' ]; then
 	echo "Need to set AUTOMAKE_ROOT - source setenv.sh" >&2
 	exit 16
@@ -135,7 +136,7 @@ fi
 
 cd "${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}" || exit 99
 # make check has to be run in 'sh' and not bash
-if ! sh make check ; then
+if ! sh -c 'make check' ; then
 	echo "MAKE check of AUTOMAKE tree failed." >&2
 	exit 16
 fi
