@@ -110,7 +110,9 @@ fi
 #
 # Setup the configuration so that the system search path looks in lib and include ahead of the standard C libraries
 #
-if ! ./configure CC=c99 CFLAGS="-qlanglvl=extc1x -qascii -D_OPEN_THREADS=3 -D_UNIX03_SOURCE=1 -DNSIG=39 -qnose -I${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}/lib,${DELTA_ROOT}/include,/usr/include" --disable-dependency-tracking --prefix="${AUTOMAKE_PROD}" ; then
+export CC=xlclang
+export CFLAGS="-qascii -D_OPEN_THREADS=3 -D_UNIX03_SOURCE=1 -DNSIG=39 -qnose -I${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}/lib,${DELTA_ROOT}/include,/usr/include"
+if ! ./configure --prefix="${AUTOMAKE_PROD}" ; then
 	echo "Configure of AUTOMAKE tree failed." >&2
 	exit 16
 fi

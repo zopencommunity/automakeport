@@ -27,5 +27,7 @@ else
 	export LIBPATH="${PERLLIB}:${LIBPATH}"
 	export PATH="${M4_ROOT}/bin:${PERL_ROOT}/bin:${AUTOCONF_ROOT}/bin:$PATH"
 
+	export PATH="${AUTOMAKE_ROOT}/bin:${PATH}"
+
 	export AUTOMAKE_PROD="/${fsroot}/automakeprod"
 fi
