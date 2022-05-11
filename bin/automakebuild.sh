@@ -123,6 +123,17 @@ if ! make ; then
 	exit 16
 fi
 
+cd "${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}" || exit 99
+# make check has to be run in 'sh' and not bash
+if ! sh -c 'make check' ; then
+	echo "MAKE check of AUTOMAKE tree failed." >&2
+	exit 16
+fi
+if ! make install ; then
+	echo "MAKE install of AUTOMAKE tree failed." >&2
+	exit 16
+fi
+
 cd "${DELTA_ROOT}/tests"
 export PATH="${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}/src:${PATH}"
 
@@ -136,14 +147,4 @@ if ! ./runexamples.sh ; then
 	exit 16
 fi
 
-cd "${AUTOMAKE_ROOT}/${AUTOMAKE_VRM}" || exit 99
-# make check has to be run in 'sh' and not bash
-if ! sh -c 'make check' ; then
-	echo "MAKE check of AUTOMAKE tree failed." >&2
-	exit 16
-fi
-if ! make install ; then
-	echo "MAKE install of AUTOMAKE tree failed." >&2
-	exit 16
-fi
 exit 0

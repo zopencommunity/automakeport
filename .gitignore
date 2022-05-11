@@ -57,3 +57,15 @@ dkms.conf
 automake-*
 tests/basic/autom4te.cache
 tests/basic/configure
+tests/autom4te.cache/
+tests/basic/aclocal.m4
+tests/basic/configure
+tests/basic/build-aux
+tests/basic/Makefile.in
+tests/basic/config.status
+tests/basic/config.log
+tests/basic/Makefile
+tests/basic/hello.o
+tests/basic/hello.dbg
+tests/basic/hello
+tests/basic/.deps
