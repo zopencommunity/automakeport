@@ -19,10 +19,44 @@ else
 	#
         # Add 'Perl' and 'M4' to PATH, LIBPATH, PERL5LIB
 	#
-        fsroot=$( basename $HOME )
-	export PERL_ROOT="/${fsroot}/perlprod"
-	export M4_ROOT="/${fsroot}/m4prod"
-	export AUTOCONF_ROOT="/${fsroot}/autoconfprod"
+	if $gitsource ; then
+		export GIT_URL="https://github.com/autotools-mirror"
+	else
+            	export TARBALL_URL="http://ftp.gnu.org/gnu/autoconf/"
+	fi
+
+	#
+        # Add 'make', 'zlib', 'Perl', 'M4' to PATH, LIBPATH, PERL5LIB
+	#
+        if [ "${GIT_ROOT}x" = "x" ]; then
+		export GIT_ROOT="${HOME}/zot/boot/git"
+	fi
+	if [ "${CURL_ROOT}x" = "x" ]; then
+		export CURL_ROOT="${HOME}/zot/boot/curl"
+	fi
+	if [ "${PERL_ROOT}x" = "x" ]; then
+		export PERL_ROOT="${HOME}/zot/prod/perl"
+	fi
+	if [ "${M4_ROOT}x" = "x" ]; then
+		export M4_ROOT="${HOME}/zot/prod/m4"
+	fi
+	if [ "${MAKE_ROOT}x" = "x" ]; then
+		export MAKE_ROOT="${HOME}/zot/prod/make"
+	fi
+	if [ "${GZIP_ROOT}x" = "x" ]; then
+		export GZIP_ROOT="${HOME}/zot/boot/gzip"
+	fi
+	if [ "${ZLIB_ROOT}x" = "x" ]; then
+		export ZLIB_ROOT="${HOME}/zot/boot/zlib"
+	fi
+	if [ "${AUTOCONF_ROOT}x" = "x" ]; then
+		export AUTOCONF_ROOT="${HOME}/zot/prod/autoconf"
+	fi
+	if [ "${AUTOMAKE_INSTALL_PREFIX}x" = "x" ]; then
+		export AUTOMAKE_INSTALL_PREFIX="${HOME}/zot/prod/automake"
+	fi
+	
+	export PATH="${M4_ROOT}/bin:${PERL_ROOT}/bin:${GIT_ROOT}/bin:${MAKE_ROOT}/bin:${CURL_ROOT}/bin:${GZIP_ROOT}/bin:${ZLIB_ROOT}/bin:${AUTOCONF_ROOT}/bin:$PATH"
 	for libperl in $(find "${PERL_ROOT}" -name "libperl.so"); do
                 lib=$(dirname "${libperl}")
 	        export LIBPATH="${lib}:${LIBPATH}"
@@ -31,9 +65,8 @@ else
 	export PERL5LIB_ROOT=$( cd ${PERL_ROOT}/lib/perl5/5*; echo $PWD )
 	export PERL5LIB="${PERL5LIB_ROOT}:${PERL5LIB_ROOT}/os390"
 
-	export PATH="${M4_ROOT}/bin:${PERL_ROOT}/bin:${AUTOCONF_ROOT}/bin:$PATH"
+	export MY_ROOT="${PWD}"
+	export PATH="${MY_ROOT}/bin:${PATH}"
 
-	export PATH="${AUTOMAKE_ROOT}/bin:${PATH}"
-
-	export AUTOMAKE_PROD="/${fsroot}/automakeprod"
+	export AUTOMAKE_PROD="${HOME}/zot/prod/automake"
 fi

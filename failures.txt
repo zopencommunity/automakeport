@@ -1,0 +1,176 @@
+This suite has to be run interactively.
+When you get to the test: 
+FAIL: t/aclocal-amflags.sh
+(which won't yet be printed out)
+you will have to kill the process that starts with:
+/bin/sh -c case 'aclocal-amflags-1.0.tar.gz' in \?*.tar.gz*) \? 
+since it hangs...
+
+I also killed /bin/sh -c p='t/aclocal-m4-sinclude.sh'; \?case  at which point it completed - so I may have killed the wrong thing :(
+
+
+SKIP: t/get-sysconf.sh
+XFAIL: t/pm/Cond2.pl
+XFAIL: t/pm/Cond3.pl
+PASS: t/pm/Condition.pl
+SKIP: t/pm/Condition-t.pl
+XFAIL: t/pm/DisjCon2.pl
+XFAIL: t/pm/DisjCon3.pl
+PASS: t/pm/DisjConditions.pl
+SKIP: t/pm/DisjConditions-t.pl
+PASS: t/pm/Version.pl
+XFAIL: t/pm/Version2.pl
+XFAIL: t/pm/Version3.pl
+PASS: t/pm/Wrap.pl
+XFAIL: t/instspc.tap 1 - squote in builddir # TODO long-standing limitation
+XFAIL: t/instspc.tap 2 - squote in destdir # TODO long-standing limitation
+XFAIL: t/instspc.tap 3 - dquote in builddir # TODO long-standing limitation
+XFAIL: t/instspc.tap 4 - dquote in destdir # TODO long-standing limitation
+XFAIL: t/instspc.tap 5 - bquote in builddir # TODO long-standing limitation
+XFAIL: t/instspc.tap 6 - bquote in destdir # TODO long-standing limitation
+XFAIL: t/instspc.tap 7 - sharp in builddir # TODO long-standing limitation
+XFAIL: t/instspc.tap 8 - sharp in destdir # TODO long-standing limitation
+XFAIL: t/instspc.tap 9 - dollar in builddir # TODO long-standing limitation
+XFAIL: t/instspc.tap 10 - dollar in destdir # TODO long-standing limitation
+PASS: t/instspc.tap 11 - bang in builddir
+PASS: t/instspc.tap 12 - bang in destdir
+XFAIL: t/instspc.tap 13 - bslash in builddir # TODO long-standing limitation
+PASS: t/instspc.tap 14 - bslash in destdir
+XFAIL: t/instspc.tap 15 - ampersand in builddir # TODO long-standing limitation
+PASS: t/instspc.tap 16 - ampersand in destdir
+PASS: t/instspc.tap 17 - percent in builddir
+PASS: t/instspc.tap 18 - percent in destdir
+PASS: t/instspc.tap 19 - leftpar in builddir
+PASS: t/instspc.tap 20 - leftpar in destdir
+PASS: t/instspc.tap 21 - rightpar in builddir
+PASS: t/instspc.tap 22 - rightpar in destdir
+PASS: t/instspc.tap 23 - pipe in builddir
+PASS: t/instspc.tap 24 - pipe in destdir
+PASS: t/instspc.tap 25 - caret in builddir
+PASS: t/instspc.tap 26 - caret in destdir
+PASS: t/instspc.tap 27 - tilde in builddir
+PASS: t/instspc.tap 28 - tilde in destdir
+PASS: t/instspc.tap 29 - qmark in builddir
+PASS: t/instspc.tap 30 - qmark in destdir
+PASS: t/instspc.tap 31 - star in builddir
+PASS: t/instspc.tap 32 - star in destdir
+PASS: t/instspc.tap 33 - plus in builddir
+PASS: t/instspc.tap 34 - plus in destdir
+PASS: t/instspc.tap 35 - minus in builddir
+PASS: t/instspc.tap 36 - minus in destdir
+PASS: t/instspc.tap 37 - comma in builddir
+PASS: t/instspc.tap 38 - comma in destdir
+PASS: t/instspc.tap 39 - colon in builddir
+PASS: t/instspc.tap 40 - colon in destdir
+PASS: t/instspc.tap 41 - semicol in builddir
+PASS: t/instspc.tap 42 - semicol in destdir
+PASS: t/instspc.tap 43 - equal in builddir
+PASS: t/instspc.tap 44 - equal in destdir
+PASS: t/instspc.tap 45 - less in builddir
+PASS: t/instspc.tap 46 - less in destdir
+PASS: t/instspc.tap 47 - more in builddir
+PASS: t/instspc.tap 48 - more in destdir
+PASS: t/instspc.tap 49 - at in builddir
+PASS: t/instspc.tap 50 - at in destdir
+PASS: t/instspc.tap 51 - lqbrack in builddir
+PASS: t/instspc.tap 52 - lqbrack in destdir
+PASS: t/instspc.tap 53 - rqbrack in builddir
+PASS: t/instspc.tap 54 - rqbrack in destdir
+PASS: t/instspc.tap 55 - lcbrack in builddir
+PASS: t/instspc.tap 56 - lcbrack in destdir
+PASS: t/instspc.tap 57 - rcbrack in builddir
+PASS: t/instspc.tap 58 - rcbrack in destdir
+PASS: t/instspc.tap 59 - space in builddir
+PASS: t/instspc.tap 60 - space in destdir
+PASS: t/instspc.tap 61 - tab in builddir
+PASS: t/instspc.tap 62 - tab in destdir
+ERROR: t/instspc.tap 64 - linefeed in destdir # OUT-OF-ORDER (expecting 63)
+ERROR: t/instspc.tap 65 - backspace in builddir # OUT-OF-ORDER (expecting 64)
+ERROR: t/instspc.tap 66 - backspace in destdir # OUT-OF-ORDER (expecting 65)
+ERROR: t/instspc.tap 67 - formfeed in builddir # OUT-OF-ORDER (expecting 66)
+ERROR: t/instspc.tap 68 - formfeed in destdir # OUT-OF-ORDER (expecting 67)
+ERROR: t/instspc.tap 69 - carriageret in builddir # OUT-OF-ORDER (expecting 68)
+ERROR: t/instspc.tap 70 - carriageret in destdir # OUT-OF-ORDER (expecting 69)
+ERROR: t/instspc.tap 71 - quadrigraph0 in builddir # OUT-OF-ORDER (expecting 70)
+ERROR: t/instspc.tap 72 - quadrigraph0 in destdir # OUT-OF-ORDER (expecting 71)
+ERROR: t/instspc.tap 73 - quadrigraph1 in builddir # OUT-OF-ORDER (expecting 72)
+ERROR: t/instspc.tap 74 - quadrigraph1 in destdir # OUT-OF-ORDER (expecting 73)
+ERROR: t/instspc.tap 75 - quadrigraph2 in builddir # OUT-OF-ORDER (expecting 74)
+ERROR: t/instspc.tap 76 - quadrigraph2 in destdir # OUT-OF-ORDER (expecting 75)
+ERROR: t/instspc.tap 77 - quadrigraph3 in builddir # OUT-OF-ORDER (expecting 76)
+ERROR: t/instspc.tap 66 - backspace in destdir # OUT-OF-ORDER (expecting 65)
+ERROR: t/instspc.tap 67 - formfeed in builddir # OUT-OF-ORDER (expecting 66)
+ERROR: t/instspc.tap 68 - formfeed in destdir # OUT-OF-ORDER (expecting 67)
+ERROR: t/instspc.tap 69 - carriageret in builddir # OUT-OF-ORDER (expecting 68)
+ERROR: t/instspc.tap 70 - carriageret in destdir # OUT-OF-ORDER (expecting 69)
+ERROR: t/instspc.tap 71 - quadrigraph0 in builddir # OUT-OF-ORDER (expecting 70)
+ERROR: t/instspc.tap 72 - quadrigraph0 in destdir # OUT-OF-ORDER (expecting 71)
+ERROR: t/instspc.tap 73 - quadrigraph1 in builddir # OUT-OF-ORDER (expecting 72)
+ERROR: t/instspc.tap 74 - quadrigraph1 in destdir # OUT-OF-ORDER (expecting 73)
+ERROR: t/instspc.tap 75 - quadrigraph2 in builddir # OUT-OF-ORDER (expecting 74)
+ERROR: t/instspc.tap 76 - quadrigraph2 in destdir # OUT-OF-ORDER (expecting 75)
+ERROR: t/instspc.tap 77 - quadrigraph3 in builddir # OUT-OF-ORDER (expecting 76)
+ERROR: t/instspc.tap 78 - quadrigraph3 in destdir # OUT-OF-ORDER (expecting 77)
+ERROR: t/instspc.tap 79 - quadrigraph4 in builddir # OUT-OF-ORDER (expecting 78)
+ERROR: t/instspc.tap 80 - quadrigraph4 in destdir # OUT-OF-ORDER (expecting 79)
+ERROR: t/instspc.tap 81 - a_b in builddir # OUT-OF-ORDER (expecting 80)
+ERROR: t/instspc.tap 82 - a_b in destdir # OUT-OF-ORDER (expecting 81)
+ERROR: t/instspc.tap 83 - a__b in builddir # OUT-OF-ORDER (expecting 82)
+ERROR: t/instspc.tap 84 - a__b in destdir # OUT-OF-ORDER (expecting 83)
+ERROR: t/instspc.tap 85 - a_lf_b in builddir # OUT-OF-ORDER (expecting 84)
+ERROR: t/instspc.tap 86 - a_lf_b in destdir # OUT-OF-ORDER (expecting 85)
+ERROR: t/instspc.tap 87 - dotdotdot in builddir # OUT-OF-ORDER (expecting 86)
+ERROR: t/instspc.tap 88 - dotdotdot in destdir # OUT-OF-ORDER (expecting 87)
+ERROR: t/instspc.tap 89 - dosdrive in builddir # OUT-OF-ORDER (expecting 88)
+ERROR: t/instspc.tap 90 - dosdrive in destdir # OUT-OF-ORDER (expecting 89)
+ERROR: t/instspc.tap 91 - miscglob1 in builddir # OUT-OF-ORDER (expecting 90)
+ERROR: t/instspc.tap 92 - miscglob1 in destdir # OUT-OF-ORDER (expecting 91)
+ERROR: t/instspc.tap 93 - miscglob2 in builddir # OUT-OF-ORDER (expecting 92)
+ERROR: t/instspc.tap 94 - miscglob2 in destdir # OUT-OF-ORDER (expecting 93)
+ERROR: t/instspc.tap - too few tests run (expected 94, got 93)
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-I-order-1.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-I-order-2.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-I-order-3.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-I-and-install.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-acdir.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+
+FAIL: t/aclocal-amflags.sh
+
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-autoconf-version-check.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-comments-respected.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-deleted-header.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-deps-subdir.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-deps.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-dirlist.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-dirlist-globbing.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-dirlist-abspath.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-install-absdir.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-install-fail.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-install-mkdir.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-m4-include-are-scanned-aclocal-amflags.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-m4-include-are-scanned.sh
+trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+
+
