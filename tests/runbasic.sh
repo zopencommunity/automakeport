@@ -1,13 +1,20 @@
 #!/bin/sh
 
 cd basic || exit 99
-genfiles=autom4te.cache configure autom4te.cache aclocal.m4 configure build-aux Makefile.in config.status config.log Makefile hello.o hello.dbg hello .deps"
+genfiles="autom4te.cache configure autom4te.cache aclocal.m4 configure build-aux Makefile.in config.status config.log Makefile hello.o hello.dbg hello .deps"
 rm -rf $genfiles
 
-export PATH="${AUTOMAKE_PROD}/bin:$PATH"
+# Set up Perl, Autoconf, Automake from prod
 
-# msf - should this be required?
-export PERL5LIB="${AUTOMAKE_PROD}/share/automake-1.16:$PERL5LIB"
+cd $HOME/zot/prod/perl || exit 99
+. ./.env
+cd $OLDPWD
+cd $HOME/zot/prod/autoconf || exit 99
+. ./.env
+cd $OLDPWD
+cd $HOME/zot/prod/automake || exit 99
+. ./.env
+cd $OLDPWD
 
 if ! whence autoreconf || ! whence aclocal ; then
 	echo "Need autoconf and automake tools on PATH before running test" >&2
