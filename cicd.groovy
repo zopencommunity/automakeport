@@ -1,5 +1,23 @@
 node('linux') 
 {
+        stage ('Poll') {
+                checkout([
+                        $class: 'GitSCM',
+                        branches: [[name: '*/main']],
+                        doGenerateSubmoduleConfigurations: false,
+                        extensions: [],
+                        userRemoteConfigs: [[url: 'https://github.com/ZOSOpenTools/automakeport.git']]])
+                ])
+
+                checkout([
+                        $class: 'GitSCM',
+                        branches: [[name: '*/main']],
+                        doGenerateSubmoduleConfigurations: false,
+                        extensions: [],
+                        userRemoteConfigs: [[url: 'https://github.com/ZOSOpenTools/utils.git']]])
+                ])
+        }
+
         stage('Build') {
                 build job: 'Port-Pipeline', parameters: [string(name: 'REPO', value: 'automakeport'), string(name: 'DESCRIPTION', 'GNU Automake is a tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.' )]
         }
