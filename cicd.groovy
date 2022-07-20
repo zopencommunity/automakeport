@@ -10,6 +10,6 @@ node('linux')
         }
 
         stage('Build') {
-                build job: 'Port-Pipeline', parameters: [string(name: 'REPO', value: 'automakeport'), string(name: 'DESCRIPTION', value: 'GNU Automake is a tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.' )]
+                build job: 'Port-Pipeline', parameters: [string(name: 'PORT_GITHUB_REPO', value: 'automakeport'), string(name: 'PORT_DESCRIPTION', value: 'GNU Automake is a tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.' )]
         }
 }
