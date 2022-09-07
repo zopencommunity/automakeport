@@ -2,6 +2,7 @@
 #
 # Set up environment variables for general build tool to operate
 #
+
 export ZOPEN_TYPE="TARBALL"
 
 export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/automake/automake-1.16.tar.gz"
