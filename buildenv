@@ -6,7 +6,7 @@
 export ZOPEN_TYPE="TARBALL"
 
 export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/automake/automake-1.16.tar.gz"
-export ZOPEN_TARBALL_DEPS="curl gzip make m4 perl autoconf tar"
+export ZOPEN_TARBALL_DEPS="curl gzip make m4 perl autoconf tar coreutils"
 
 export ZOPEN_GIT_URL="https://github.com/autotools-mirror/automake.git"
 export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake help2man makeinfo xz tar"
@@ -27,7 +27,7 @@ zopen_check_results()
 chk="$2_check.log"
 
 set -x
-failures=$(egrep '^ERROR|^FAIL' *16/*check.log | wc -l)
+failures=$(egrep '^ERROR|^FAIL' ${chk} | wc -l)
 if [ ${failures} -gt 33 ]; then
   exit 2
 else
