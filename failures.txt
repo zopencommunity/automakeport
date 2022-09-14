@@ -1,13 +1,4 @@
-This suite has to be run interactively.
-When you get to the test: 
-FAIL: t/aclocal-amflags.sh
-(which won't yet be printed out)
-you will have to kill the process that starts with:
-/bin/sh -c case 'aclocal-amflags-1.0.tar.gz' in \?*.tar.gz*) \? 
-since it hangs...
-
-I also killed /bin/sh -c p='t/aclocal-m4-sinclude.sh'; \?case  at which point it completed - so I may have killed the wrong thing :(
-
+Failures September 14th 2022
 
 SKIP: t/get-sysconf.sh
 XFAIL: t/pm/Cond2.pl
@@ -98,18 +89,6 @@ ERROR: t/instspc.tap 74 - quadrigraph1 in destdir # OUT-OF-ORDER (expecting 73)
 ERROR: t/instspc.tap 75 - quadrigraph2 in builddir # OUT-OF-ORDER (expecting 74)
 ERROR: t/instspc.tap 76 - quadrigraph2 in destdir # OUT-OF-ORDER (expecting 75)
 ERROR: t/instspc.tap 77 - quadrigraph3 in builddir # OUT-OF-ORDER (expecting 76)
-ERROR: t/instspc.tap 66 - backspace in destdir # OUT-OF-ORDER (expecting 65)
-ERROR: t/instspc.tap 67 - formfeed in builddir # OUT-OF-ORDER (expecting 66)
-ERROR: t/instspc.tap 68 - formfeed in destdir # OUT-OF-ORDER (expecting 67)
-ERROR: t/instspc.tap 69 - carriageret in builddir # OUT-OF-ORDER (expecting 68)
-ERROR: t/instspc.tap 70 - carriageret in destdir # OUT-OF-ORDER (expecting 69)
-ERROR: t/instspc.tap 71 - quadrigraph0 in builddir # OUT-OF-ORDER (expecting 70)
-ERROR: t/instspc.tap 72 - quadrigraph0 in destdir # OUT-OF-ORDER (expecting 71)
-ERROR: t/instspc.tap 73 - quadrigraph1 in builddir # OUT-OF-ORDER (expecting 72)
-ERROR: t/instspc.tap 74 - quadrigraph1 in destdir # OUT-OF-ORDER (expecting 73)
-ERROR: t/instspc.tap 75 - quadrigraph2 in builddir # OUT-OF-ORDER (expecting 74)
-ERROR: t/instspc.tap 76 - quadrigraph2 in destdir # OUT-OF-ORDER (expecting 75)
-ERROR: t/instspc.tap 77 - quadrigraph3 in builddir # OUT-OF-ORDER (expecting 76)
 ERROR: t/instspc.tap 78 - quadrigraph3 in destdir # OUT-OF-ORDER (expecting 77)
 ERROR: t/instspc.tap 79 - quadrigraph4 in builddir # OUT-OF-ORDER (expecting 78)
 ERROR: t/instspc.tap 80 - quadrigraph4 in destdir # OUT-OF-ORDER (expecting 79)
@@ -128,49 +107,93 @@ ERROR: t/instspc.tap 92 - miscglob1 in destdir # OUT-OF-ORDER (expecting 91)
 ERROR: t/instspc.tap 93 - miscglob2 in builddir # OUT-OF-ORDER (expecting 92)
 ERROR: t/instspc.tap 94 - miscglob2 in destdir # OUT-OF-ORDER (expecting 93)
 ERROR: t/instspc.tap - too few tests run (expected 94, got 93)
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-I-order-1.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-I-order-2.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-I-order-3.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-I-and-install.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-acdir.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
-
-FAIL: t/aclocal-amflags.sh
-
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-amflags.sh
 PASS: t/aclocal-autoconf-version-check.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-comments-respected.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
+PASS: t/aclocal-deleted-header-aclocal-amflags.sh
 PASS: t/aclocal-deleted-header.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-deps-subdir.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-deps.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-dirlist.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-dirlist-globbing.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-dirlist-abspath.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-install-absdir.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-install-fail.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-install-mkdir.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-m4-include-are-scanned-aclocal-amflags.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
 PASS: t/aclocal-m4-include-are-scanned.sh
-trap: ./lib/test-driver 103: FSUM7327 signal number 13 not conventional
-
-
+PASS: t/aclocal-m4-sinclude.sh
+PASS: t/aclocal-macrodir.tap 1 - AC_CONFIG_MACRO_DIR is honored
+PASS: t/aclocal-macrodir.tap 2 - AC_CONFIG_MACRO_DIR([foo]) interaction with --install
+PASS: t/aclocal-macrodir.tap 3 - '-I' option wins over AC_CONFIG_MACRO_DIR
+PASS: t/aclocal-macrodir.tap 4 - AC_CONFIG_MACRO_DIR([foo]) can create directory 'foo'
+PASS: t/aclocal-macrodir.tap 5 - AC_CONFIG_MACRO_DIR([non-existent]) warns with -Wunsupported
+PASS: t/aclocal-macrodir.tap 6 - AC_CONFIG_MACRO_DIR([not-exist]) and ACLOCAL_AMFLAGS = -I not-exist
+PASS: t/aclocal-macrodir.tap 7 - AC_CONFIG_MACRO_DIR interaction with AC_REQUIRE
+PASS: t/aclocal-macrodirs.tap 1 - AC_CONFIG_MACRO_DIRS is honored
+PASS: t/aclocal-macrodirs.tap 2 - AC_CONFIG_MACRO_DIRS several arguments
+PASS: t/aclocal-macrodirs.tap 3 - AC_CONFIG_MACRO_DIRS several calls
+PASS: t/aclocal-macrodirs.tap 4 - AC_CONFIG_MACRO_DIRS extra whitespace
+PASS: t/aclocal-macrodirs.tap 5 - AC_CONFIG_MACRO_DIRS precedence
+PASS: t/aclocal-macrodirs.tap 6 - AC_CONFIG_MACRO_DIRS interaction with --install
+PASS: t/aclocal-macrodirs.tap 7 - several AC_CONFIG_MACRO_DIRS arguments and --install
+PASS: t/aclocal-macrodirs.tap 8 - several AC_CONFIG_MACRO_DIRS calls and --install
+PASS: t/aclocal-macrodirs.tap 9 - '-I' option wins over AC_CONFIG_MACRO_DIRS
+PASS: t/aclocal-macrodirs.tap 10 - AC_CONFIG_MACRO_DIRS([foo]) can create directory 'foo'
+PASS: t/aclocal-macrodirs.tap 11 - AC_CONFIG_MACRO_DIRS([non-existent]) warns (1)
+PASS: t/aclocal-macrodirs.tap 12 - AC_CONFIG_MACRO_DIRS([non-existent]) warns (2)
+PASS: t/aclocal-macrodirs.tap 13 - AC_CONFIG_MACRO_DIRS([existent non-existent]) errors out
+PASS: t/aclocal-macrodirs.tap 14 - AC_CONFIG_MACRO_DIRS([not-exist]) and ACLOCAL_AMFLAGS = -I not-exist
+PASS: t/aclocal-macrodirs.tap 15 - AC_CONFIG_MACRO_DIRS interaction with AC_REQUIRE
+PASS: t/aclocal-missing-macros.sh
+PASS: t/aclocal-no-extra-scan.sh
+PASS: t/aclocal-no-force.sh
+PASS: t/aclocal-no-install-no-mkdir.sh
+PASS: t/aclocal-no-symlinked-overwrite.sh
+PASS: t/aclocal-no-unused-required.sh
+PASS: t/aclocal-path.sh
+PASS: t/aclocal-path-install.sh
+PASS: t/aclocal-path-install-serial.sh
+PASS: t/aclocal-path-nonexistent.sh
+PASS: t/aclocal-path-precedence.sh
+PASS: t/aclocal-pr450.sh
+PASS: t/aclocal-print-acdir.sh
+PASS: t/aclocal-req.sh
+PASS: t/aclocal-remake-misc.sh
+PASS: t/aclocal-scan-configure-ac-pr319.sh
+PASS: t/aclocal-serial.sh
+PASS: t/aclocal-underquoted-defun.sh
+PASS: t/aclocal-verbose-install.sh
+FAIL: t/auxdir-pr15981.sh
+PASS: t/auxdir-cc-pr15981.sh
+PASS: t/ac-output-old.tap 1 - aclocal groks '\' in AC_OUTPUT (acoutbs1)
+PASS: t/ac-output-old.tap 2 - automake groks '\' in AC_OUTPUT (acoutbs1)
+PASS: t/ac-output-old.tap 3 - autoconf groks '\' in AC_OUTPUT (acoutbs1)
+PASS: t/ac-output-old.tap 4 - can ./configure in acoutbs1
+PASS: t/ac-output-old.tap 5 - zot created in acoutbs1
+PASS: t/ac-output-old.tap 6 - '\' not leaked in filenames in acoutbs1
+PASS: t/ac-output-old.tap 7 - aclocal groks '\' in AC_OUTPUT (acoutbs2)
+PASS: t/ac-output-old.tap 8 - automake groks '\' in AC_OUTPUT (acoutbs2)
+PASS: t/ac-output-old.tap 9 - autoconf groks '\' in AC_OUTPUT (acoutbs2)
+PASS: t/ac-output-old.tap 10 - can ./configure in acoutbs2
+PASS: t/ac-output-old.tap 11 - zot created in acoutbs2
+PASS: t/ac-output-old.tap 12 - '\' not leaked in filenames in acoutbs2
+PASS: t/ac-output-old.tap 13 - aclocal and quoted AC_OUTPUT second argument
+PASS: t/ac-output-old.tap 14 - automake and quoted AC_OUTPUT second argument
+PASS: t/ac-output-old.tap 15 - aclocal and two AC_OUTPUT arguments on same line
+PASS: t/ac-output-old.tap 16 - automake and two AC_OUTPUT arguments on same line
+PASS: t/ac-output-old.tap 17 - aclocal and AC_OUTPUT (acoutput2)
+PASS: t/ac-output-old.tap 18 - automake and AC_OUTPUT (acoutput2)
+PASS: t/ac-output-old.tap 19 - foo.in mentioned two times in Makefile.in (acoutput2)
+PASS: t/ac-output-old.tap 20 - 'automake -a -f' and AC_OUTPUT (acoutput2)
+PASS: t/ac-output-old.tap 21 - aclocal and two AC_OUTPUT arguments on two lines
+PASS: t/ac-output-old.tap 22 - automake and two AC_OUTPUT arguments on two lines
+PASS: t/acsilent.sh
+PASS: t/acsubst.sh
+PASS: t/acsubst2.sh
