@@ -26,11 +26,10 @@ zopen_check_results()
 #
 chk="$2_check.log"
 
-set -x
 failures=$(egrep '^ERROR|^FAIL' ${chk} | wc -l)
 if [ ${failures} -gt 33 ]; then
-  exit 2
+  return 2
 else
-  exit 1
+  return 1
 fi
 }
