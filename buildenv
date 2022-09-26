@@ -20,16 +20,14 @@ fi
 
 zopen_check_results()
 {
-#!/bin/sh
-# automake should have less than 33 failures
-# Determine number of failures by looking at first word on lines and counting ERROR and FAIL
-#
 chk="$2_check.log"
 
 failures=$(egrep '^ERROR|^FAIL' ${chk} | wc -l)
-if [ ${failures} -gt 33 ]; then
-  return 2
-else
-  return 1
-fi
+totalTests=$(egrep '^ERROR|^FAIL|^PASS' ${chk} | wc -l)
+
+cat <<ZZ
+actualFailures:$failures
+totalTests:$totalTests
+expectedFailures:33
+ZZ
 }
