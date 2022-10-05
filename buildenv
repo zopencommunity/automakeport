@@ -13,6 +13,7 @@ export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake help2man makeinfo xz t
 
 export ZOPEN_EXTRA_CFLAGS=""
 export ZOPEN_EXTRA_LDFLAGS=""
+export PERL="/bin/env perl"
 
 if [ "${ZOPEN_TYPE}x" = "TARBALLx" ]; then
 	export ZOPEN_BOOTSTRAP=skip
