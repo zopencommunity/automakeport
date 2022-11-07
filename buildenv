@@ -21,7 +21,7 @@ fi
 
 zopen_check_results()
 {
-chk="$2_check.log"
+chk="$1/$2_check.log"
 
 failures=$(egrep '^ERROR|^FAIL' ${chk} | wc -l)
 totalTests=$(egrep '^ERROR|^FAIL|^PASS' ${chk} | wc -l)
