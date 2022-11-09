@@ -1,13 +1,13 @@
 diff --git a/lib/test-driver b/lib/test-driver
-index 880a2e8..f2d8cc0 100755
+index be73b80..ecc175b 100755
 --- a/lib/test-driver
 +++ b/lib/test-driver
-@@ -100,7 +100,7 @@ fi
+@@ -102,7 +102,7 @@ fi
  do_exit='rm -f $log_file $trs_file; (exit $st); exit $st'
  trap "st=129; $do_exit" 1
  trap "st=130; $do_exit" 2
 -trap "st=141; $do_exit" 13
-+trap "st=141; $do_exit" SIGPIPE 
++trap "st=141; $do_exit" SIGPIPE
  trap "st=143; $do_exit" 15
  
- # Test script is run here.
+ # Test script is run here. We create the file first, then append to it,

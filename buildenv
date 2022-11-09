@@ -5,11 +5,11 @@
 
 export ZOPEN_TYPE="TARBALL"
 
-export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/automake/automake-1.16.tar.gz"
-export ZOPEN_TARBALL_DEPS="curl gzip make m4 perl autoconf tar coreutils gawk"
+export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/automake/automake-1.16.5.tar.gz"
+export ZOPEN_TARBALL_DEPS="curl gzip make m4 perl autoconf tar gawk coreutils"
 
 export ZOPEN_GIT_URL="https://github.com/autotools-mirror/automake.git"
-export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake help2man makeinfo xz tar"
+export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake help2man makeinfo xz tar gawk"
 
 export ZOPEN_EXTRA_CFLAGS=""
 export ZOPEN_EXTRA_LDFLAGS=""
@@ -29,6 +29,6 @@ totalTests=$(egrep '^ERROR|^FAIL|^PASS' ${chk} | wc -l)
 cat <<ZZ
 actualFailures:$failures
 totalTests:$totalTests
-expectedFailures:33
+expectedFailures:2
 ZZ
 }
