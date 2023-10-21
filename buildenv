@@ -5,11 +5,13 @@
 
 export ZOPEN_TYPE="TARBALL"
 
-export ZOPEN_TARBALL_URL="https://ftp.gnu.org/gnu/automake/automake-1.16.5.tar.gz"
-export ZOPEN_TARBALL_DEPS="curl gzip make m4 perl autoconf tar gawk coreutils help2man"
+# bump: automake-version /AUTOMAKE_VERSION="(.*)"/ https://ftp.gnu.org/gnu/automake/|re:/href="automake-([\d.]+).tar.gz"/$1/|semver:*
+AUTOMAKE_VERSION="1.16.5"
+export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/automake/automake-${AUTOMAKE_VERSION}.tar.gz"
+export ZOPEN_STABLE_DEPS="curl gzip make m4 perl autoconf tar gawk coreutils help2man"
 
-export ZOPEN_GIT_URL="https://github.com/autotools-mirror/automake.git"
-export ZOPEN_GIT_DEPS="git make m4 perl autoconf automake help2man texinfo xz tar gawk"
+export ZOPEN_DEV_URL="https://github.com/autotools-mirror/automake.git"
+export ZOPEN_DEV_DEPS="git make m4 perl autoconf automake help2man texinfo xz tar gawk"
 
 export ZOPEN_EXTRA_CFLAGS=""
 export ZOPEN_EXTRA_LDFLAGS=""
