@@ -17,6 +17,8 @@ export ZOPEN_EXTRA_CFLAGS=""
 export ZOPEN_EXTRA_LDFLAGS=""
 export PERL="/bin/env perl"
 
+export ZOPEN_CHECK_TIMEOUT=36000 # 10 hours
+
 if [ "${ZOPEN_BUILD_LINE}x" = "STABLEx" ]; then
 	export ZOPEN_BOOTSTRAP=skip
 fi
