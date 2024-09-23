@@ -1,0 +1,22 @@
+diff --git a/configure b/configure
+index 45bf85a..60a8d54 100755
+--- a/configure
++++ b/configure
+@@ -3509,17 +3509,6 @@ printf "%s\n" "no" >&6; }
+ fi
+ 
+ 
+-case $PERL in
+- '')
+-   as_fn_error $? "perl not found" "$LINENO" 5
+-   ;;
+- *' '* | *'	'*)
+-  as_fn_error $? "The path to your Perl contains spaces or tabs.
+-This would cause build failures later or unusable programs.
+-Please use a path without spaces and try again." "$LINENO" 5
+-  ;;
+-esac
+-
+ # Save details about the selected perl interpreter in config.log.
+ { echo "$as_me:$LINENO: $PERL --version" >&5
+    ($PERL --version) >&5 2>&5
