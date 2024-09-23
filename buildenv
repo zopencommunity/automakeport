@@ -6,7 +6,7 @@
 export ZOPEN_BUILD_LINE="STABLE"
 
 # bump: automake-version /AUTOMAKE_VERSION="(.*)"/ https://ftp.gnu.org/gnu/automake/|re:/href="automake-([\d.]+).tar.gz"/$1/|semver:*
-AUTOMAKE_VERSION="1.16.5"
+AUTOMAKE_VERSION="1.17"
 export ZOPEN_STABLE_URL="https://ftp.gnu.org/gnu/automake/automake-${AUTOMAKE_VERSION}.tar.gz"
 export ZOPEN_STABLE_DEPS="curl gzip make m4 perl autoconf tar gawk coreutils help2man"
 
