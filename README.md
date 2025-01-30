@@ -1,6 +1,6 @@
 [![Automatic version updates](https://github.com/ZOSOpenTools/automakeport/actions/workflows/bump.yml/badge.svg)](https://github.com/ZOSOpenTools/automakeport/actions/workflows/bump.yml)
 
-# automake
+# Automake
 
 Tool for managing dependencies in software projects using GNU Autotools
 
@@ -24,3 +24,9 @@ zopen build -vv
 ```
 
 See the [zopen porting guide](https://zopen.community/#/Guides/Porting) for more details.
+
+## Troubleshooting
+// Add troubleshooting information here
+
+## Contributing
+Contributions are welcome! Please follow the [zopen contribution guidelines](https://github.com/zopencommunity/meta/blob/main/CONTRIBUTING.md).
