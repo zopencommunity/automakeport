@@ -1,0 +1,13 @@
+diff --git a/bin/automake.in b/bin/automake.in
+index a17f452..403a42b 100644
+--- a/bin/automake.in
++++ b/bin/automake.in
+@@ -6872,7 +6872,7 @@ sub transform ($\%)
+     {
+       my $neg = ($1 eq '!') ? 1 : 0;
+       my $val = transform_token ($token, %$transform, $2);
+-      return (!!$val == $neg) ? '##%' : '';
++      return ((!!$val) == $neg) ? '##%' : '';
+     }
+   else
+     {
