@@ -1,8 +1,8 @@
 diff --git a/configure b/configure
-index 45bf85a..60a8d54 100755
+index 5da78e9..bc803a8 100755
 --- a/configure
 +++ b/configure
-@@ -3509,17 +3509,6 @@ printf "%s\n" "no" >&6; }
+@@ -3771,24 +3771,6 @@ printf "%s\n" "no" >&6; }
  fi
  
  
@@ -11,9 +11,16 @@ index 45bf85a..60a8d54 100755
 -   as_fn_error $? "perl not found" "$LINENO" 5
 -   ;;
 - *' '* | *'	'*)
--  as_fn_error $? "The path to your Perl contains spaces or tabs.
--This would cause build failures later or unusable programs.
--Please use a path without spaces and try again." "$LINENO" 5
+-  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: WARNING: The path to your Perl contains spaces or tabs.
+-This will likely cause build failures later or unusable programs.
+-Unless you're specifying a full string for a #! line,
+-as in \"/usr/bin/env perl\",
+-please use a path without spaces and try again." >&5
+-printf "%s\n" "$as_me: WARNING: The path to your Perl contains spaces or tabs.
+-This will likely cause build failures later or unusable programs.
+-Unless you're specifying a full string for a #! line,
+-as in \"/usr/bin/env perl\",
+-please use a path without spaces and try again." >&2;}
 -  ;;
 -esac
 -
