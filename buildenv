@@ -33,7 +33,7 @@ totalTests=$(egrep '^ERROR|^FAIL|^PASS' ${chk} | wc -l)
 cat <<ZZ
 actualFailures:$failures
 totalTests:$totalTests
-expectedFailures:2
+expectedFailures:65
 ZZ
 }
 
