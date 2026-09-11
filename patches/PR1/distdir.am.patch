@@ -1,8 +1,8 @@
 diff --git a/lib/am/distdir.am b/lib/am/distdir.am
-index 9bd3028..aebcc09 100644
+index 6ba8dff..79e2341 100644
 --- a/lib/am/distdir.am
 +++ b/lib/am/distdir.am
-@@ -459,6 +459,7 @@ distcheck: dist
+@@ -537,6 +537,7 @@ distcheck: dist
  ## Make the new source tree read-only.  Distributions ought to work in
  ## this case.  However, make the top-level directory writable so we
  ## can make our new subdirs.
